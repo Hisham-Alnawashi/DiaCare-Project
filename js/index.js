@@ -1,9 +1,8 @@
-// Login Page Script
+
 
 const togglePassword = document.querySelector('#togglePassword');
 const passwordInput = document.querySelector('#password');
 
-// Initially hide the eye if password is empty
 if (passwordInput.value.length === 0) {
     togglePassword.style.display = 'none';
 }
@@ -15,7 +14,6 @@ togglePassword.addEventListener('click', function () {
     this.classList.toggle('fa-eye-slash');
 });
 
-// Show/hide eye based on password input
 passwordInput.addEventListener('input', function() {
     if (this.value.length > 0) {
         togglePassword.style.display = 'block';
@@ -30,16 +28,15 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     window.location.href = 'dashboard.html';
 });
 
-// Arabic Language Button
 const langSwitch = document.querySelector('.lang-switch');
 langSwitch.addEventListener('click', function() {
     const icon = this.querySelector('i');
     icon.style.transform = icon.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
-    // Switch language
+    
     const isArabic = document.documentElement.lang === 'ar';
     document.documentElement.lang = isArabic ? 'en' : 'ar';
     document.documentElement.dir = isArabic ? 'ltr' : 'rtl';
-    // Change all text to Arabic
+    
     const welcomeText = document.querySelector('.login-card h2');
     const subtitle = document.querySelector('.subtitle');
     const labels = document.querySelectorAll('label');
@@ -55,7 +52,6 @@ langSwitch.addEventListener('click', function() {
     const headerDesc = document.querySelector('.header p');
 
     if (isArabic) {
-        // Switch to English
         document.documentElement.lang = 'en';
         document.documentElement.dir = 'ltr';
         welcomeText.textContent = 'Welcome Back';
@@ -75,7 +71,6 @@ langSwitch.addEventListener('click', function() {
         headerDesc.textContent = 'Your intelligent partner in diabetes management and daily wellness.';
         this.querySelector('span').textContent = 'العربية';
     } else {
-        // Switch to Arabic
         document.documentElement.lang = 'ar';
         document.documentElement.dir = 'rtl';
         welcomeText.textContent = 'مرحباً بعودتك';
@@ -97,35 +92,35 @@ langSwitch.addEventListener('click', function() {
     }
 });
 
-// Forgot Password
+
 document.querySelector('.forgot-link').addEventListener('click', function(e) {
     e.preventDefault();
     window.location.href = 'forgot-password.html';
 });
 
-// Create Account
+
 document.querySelector('.footer a').addEventListener('click', function(e) {
     e.preventDefault();
     window.location.href = 'register.html';
 });
 
-// Google Login
+
 document.querySelector('.social-btn').addEventListener('click', function() {
     window.location.href = 'https://accounts.google.com';
 });
 
-// Biometric Login
+
 document.querySelectorAll('.social-btn')[1].addEventListener('click', function() {
     alert('Biometric authentication is not available in this demo.');
 });
 
-// Privacy Policy
+
 document.querySelector('.footer-links a:first-child').addEventListener('click', function(e) {
     e.preventDefault();
     alert('Privacy Policy:\n\nDiaCare is committed to protecting your privacy. We collect minimal data necessary for diabetes management and ensure all information is encrypted and secure. Contact us for more details.');
 });
 
-// Support Center
+
 document.querySelector('.footer-links a:last-child').addEventListener('click', function(e) {
     e.preventDefault();
     alert('Support Center:\n\nFor assistance, email support@diacare.com or call our helpline. Our team is available 24/7 to help with your diabetes management needs.');

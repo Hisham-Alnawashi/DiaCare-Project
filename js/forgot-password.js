@@ -1,15 +1,15 @@
-// Forgot Password Page Script
 
-// Arabic Language Button
+
+
 const langSwitch = document.querySelector('.lang-switch');
 langSwitch.addEventListener('click', function() {
     const icon = this.querySelector('i');
     icon.style.transform = icon.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
-    // Switch language
+    
     const isArabic = document.documentElement.lang === 'ar';
     document.documentElement.lang = isArabic ? 'en' : 'ar';
     document.documentElement.dir = isArabic ? 'ltr' : 'rtl';
-    // Change all text to Arabic
+    
     const welcomeText = document.querySelector('.login-card h2');
     const subtitle = document.querySelector('.subtitle');
     const labels = document.querySelectorAll('label');
@@ -20,7 +20,6 @@ langSwitch.addEventListener('click', function() {
     const headerDesc = document.querySelector('.header p');
 
     if (isArabic) {
-        // Switch to English
         document.documentElement.lang = 'en';
         document.documentElement.dir = 'ltr';
         welcomeText.textContent = 'Reset Password';
@@ -33,7 +32,6 @@ langSwitch.addEventListener('click', function() {
         headerDesc.textContent = 'Your intelligent partner in diabetes management and daily wellness.';
         this.querySelector('span').textContent = 'العربية';
     } else {
-        // Switch to Arabic
         document.documentElement.lang = 'ar';
         document.documentElement.dir = 'rtl';
         welcomeText.textContent = 'إعادة تعيين كلمة المرور';
