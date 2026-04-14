@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap');
+
+:root {
+    --primary-blue: #0061a4;
+    --soft-bg: #f8f9ff;
+}
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--soft-bg);
+        color: #181c22;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+    }
+
+    html, body {
+        min-width: 0;
+    }
+
+    h1, h2, h3, .font-headline {
+        font-family: 'Manrope', sans-serif;
+        letter-spacing: -0.02em;
+    }
+
+    .bg-surface-container-low {
+        background-color: #ffffff !important;
+        border: 1px solid rgba(223, 226, 234, 0.5);
+        box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.02);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .bg-surface-container-low:hover {
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+        transform: translateY(-2px);
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #e2e8f0;
+        border-radius: 10px;
+    }
+
+    header {
+        border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    button, .btn-action {
+        transition: all 0.2s ease;
+    }
+
+    #bolus-modal:target {
+        display: flex !important;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+    }
+
+    html.dark body {
+        background-color: #020617;
+        color: #e2e8f0;
+        background-image: none;
+    }
+
+    html.dark .bg-surface,
+    html.dark .bg-surface-container,
+    html.dark .bg-surface-container-low,
+    html.dark .bg-surface-container-lowest,
+    html.dark .bg-surface-container-high,
+    html.dark .bg-surface-container-highest,
+    html.dark .bg-surface-bright {
+        background-color: #0f172a !important;
+        border-color: rgba(148, 163, 184, 0.12);
+        box-shadow: 0 4px 24px rgba(15, 23, 42, 0.25);
+    }
+
+    html.dark .bg-surface-container-low {
+        background-color: #111827 !important;
+    }
+
+    html.dark .bg-surface-container-lowest {
+        background-color: #111827 !important;
+    }
+
+    html.dark .bg-surface-container-highest {
+        background-color: #1f2937 !important;
+    }
+
+    html.dark .bg-white,
+    html.dark .bg-white\/5,
+    html.dark .bg-white\/10 {
+        background-color: rgba(255, 255, 255, 0.06) !important;
+    }
+
+    html.dark .text-on-surface,
+    html.dark .text-on-surface-variant,
+    html.dark .text-slate-600,
+    html.dark .text-slate-500,
+    html.dark .text-slate-400,
+    html.dark .text-slate-300,
+    html.dark .text-slate-200,
+    html.dark .text-slate-700,
+    html.dark .text-blue-800,
+    html.dark .text-blue-600,
+    html.dark .text-primary,
+    html.dark .text-secondary,
+    html.dark .text-tertiary,
+    html.dark .text-on-primary,
+    html.dark .text-on-secondary,
+    html.dark .text-secondary-fixed,
+    html.dark .text-on-secondary-fixed,
+    html.dark .text-on-secondary-fixed-variant {
+        color: #e2e8f0 !important;
+    }
+
+    html.dark .text-primary {
+        color: #93c5fd !important;
+    }
+
+    html.dark .text-blue-800,
+    html.dark .text-blue-600 {
+        color: #93c5fd !important;
+    }
+
+    html.dark .text-slate-600,
+    html.dark .text-slate-500,
+    html.dark .text-slate-400,
+    html.dark .text-slate-300,
+    html.dark .text-slate-200,
+    html.dark .text-on-surface-variant {
+        color: #cbd5e1 !important;
+    }
+
+    html.dark .text-slate-700,
+    html.dark .text-on-surface,
+    html.dark .text-on-primary,
+    html.dark .text-on-secondary,
+    html.dark .text-secondary,
+    html.dark .text-tertiary,
+    html.dark .text-on-secondary-fixed,
+    html.dark .text-on-secondary-fixed-variant {
+        color: #e2e8f0 !important;
+    }
+
+    html.dark body,
+    html.dark body * {
+        color: #f8fafc !important;
+    }
+
+    html.dark .text-white,
+    html.dark .text-slate-50,
+    html.dark .text-slate-100,
+    html.dark .text-on-surface,
+    html.dark .text-on-primary,
+    html.dark .text-on-secondary {
+        color: #f8fafc !important;
+    }
+
+    html.dark .border-slate-200,
+    html.dark .border-slate-100 {
+        border-color: #334155 !important;
+    }
+
+    html.dark .hover\:bg-white:hover {
+        background-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    html.dark .hover\:bg-slate-100:hover {
+        background-color: rgba(148, 163, 184, 0.12) !important;
+    }
+
+    html.dark .shadow-sm {
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.35);
+    }
